@@ -9,5 +9,5 @@ Class {
 BaselineOfTestSimpleRene >> baseline: spec [
 
 	<baseline>
-	spec for: #common do: [ spec package: 'BaselineOfTestSimpleRene' ]
+	spec for: #common do: [ spec package: 'TestSimpleRene' ]
 ]
