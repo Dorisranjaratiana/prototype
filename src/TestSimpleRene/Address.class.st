@@ -3,11 +3,21 @@ Class {
 	#superclass : 'Object',
 	#instVars : [
 		'place',
-		'street'
+		'street',
+		'number'
 	],
 	#category : 'TestSimpleRene',
 	#package : 'TestSimpleRene'
 }
+
+{ #category : 'acessing-magritte' }
+Address >> descriptionNumber [
+	<simpleReneDescription>
+	^ SRNumberDescription new
+		accessor: #number;
+		label: 'Number';
+		yourself
+]
 
 { #category : 'acessing-magritte' }
 Address >> descriptionPlace [
@@ -27,6 +37,18 @@ Address >> descriptionStreet [
 		  label: 'Street';
 		  beRequired;
 		  yourself
+]
+
+{ #category : 'accessing' }
+Address >> number [
+
+	^ number
+]
+
+{ #category : 'accessing' }
+Address >> number: anObject [
+
+	number := anObject
 ]
 
 { #category : 'accessing' }
