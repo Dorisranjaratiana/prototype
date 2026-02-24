@@ -4,7 +4,8 @@ Class {
 	#instVars : [
 		'age',
 		'nom',
-		'sexe'
+		'sexe',
+		'uiColor'
 	],
 	#category : 'TestSimpleRene',
 	#package : 'TestSimpleRene'
@@ -47,6 +48,12 @@ ClientHopital >> descriptionSexe [
 		accessor: #sexe ;
 		label: 'Sexe';
 		yourself
+]
+
+{ #category : 'initialization' }
+ClientHopital >> initialize [
+
+	uiColor := Color blue
 ]
 
 { #category : 'accessing' }

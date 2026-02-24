@@ -32,7 +32,7 @@ MyForm >> defaultLayout [
 MyForm >> newNumberDescriptionInput: aDescription [
 
 	^ SpBoxLayout newLeftToRight add:
-		  (self newNumberInput number: 0 )
+		  (SpDatePresenter new)
 ]
 
 { #category : 'instance creation' }
