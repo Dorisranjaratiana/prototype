@@ -13,9 +13,9 @@ Class {
 { #category : 'acessing-magritte' }
 Address >> descriptionNumber [
 	<simpleReneDescription>
-	^ SRNumberDescription new
-		accessor: #number;
-		label: 'Number';
+	^ SRBooleanDescription new
+		accessor: #bool;
+		label: 'Boolean';
 		yourself
 ]
 

@@ -5,7 +5,10 @@ Class {
 		'age',
 		'nom',
 		'sexe',
-		'uiColor'
+		'uiColor',
+		'prenom',
+		'quantite',
+		'dateNaissance'
 	],
 	#category : 'TestSimpleRene',
 	#package : 'TestSimpleRene'
@@ -23,12 +26,33 @@ ClientHopital >> age: anObject [
 	age := anObject
 ]
 
+{ #category : 'accessing' }
+ClientHopital >> dateNaissance [
+
+	^ dateNaissance
+]
+
+{ #category : 'accessing' }
+ClientHopital >> dateNaissance: anObject [
+
+	dateNaissance := anObject
+]
+
 { #category : 'as yet unclassified' }
 ClientHopital >> descriptionAge [
 	<simpleReneDescription>
-	^ SRStringDescription new
+	^ SRNumberDescription new
 		accessor: #age;
-		label: 'Age';
+		label: 'Ageeeeee';
+		yourself
+]
+
+{ #category : 'as yet unclassified' }
+ClientHopital >> descriptionDateNaissance [
+	<simpleReneDescription>
+	^ SRDateDescription new
+		accessor: #dateNaissance ;
+		label: 'Date de naissance';
 		yourself
 ]
 
@@ -38,6 +62,24 @@ ClientHopital >> descriptionNom [
 	^ SRStringDescription new
 		accessor: #nom ;
 		label: 'Nom';
+		yourself
+]
+
+{ #category : 'as yet unclassified' }
+ClientHopital >> descriptionPrenom [
+	<simpleReneDescription>
+	^ SRStringDescription new
+		accessor: #prenom ;
+		label: 'Prenom';
+		yourself
+]
+
+{ #category : 'as yet unclassified' }
+ClientHopital >> descriptionQuantite [
+	<simpleReneDescription>
+	^ SRNumberDescription new
+		accessor: #quantite ;
+		label: 'Quantite';
 		yourself
 ]
 
@@ -69,6 +111,30 @@ ClientHopital >> nom: anObject [
 ]
 
 { #category : 'accessing' }
+ClientHopital >> prenom [
+
+	^ prenom
+]
+
+{ #category : 'accessing' }
+ClientHopital >> prenom: anObject [
+
+	prenom := anObject
+]
+
+{ #category : 'accessing' }
+ClientHopital >> quantite [
+
+	^ quantite
+]
+
+{ #category : 'accessing' }
+ClientHopital >> quantite: anObject [
+
+	quantite := anObject
+]
+
+{ #category : 'accessing' }
 ClientHopital >> sexe [
 
 	^ sexe
@@ -78,4 +144,16 @@ ClientHopital >> sexe [
 ClientHopital >> sexe: anObject [
 
 	sexe := anObject
+]
+
+{ #category : 'accessing' }
+ClientHopital >> uiColor [
+
+	^ uiColor
+]
+
+{ #category : 'accessing' }
+ClientHopital >> uiColor: anObject [
+
+	uiColor := anObject
 ]

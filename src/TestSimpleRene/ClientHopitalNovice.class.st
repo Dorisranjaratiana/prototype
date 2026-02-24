@@ -2,7 +2,11 @@ Class {
 	#name : 'ClientHopitalNovice',
 	#superclass : 'ClientHopital',
 	#instVars : [
-		'allergie'
+		'allergie',
+		'commentaire',
+		'rendezVous',
+		'rendezVousAvecTimeDate',
+		'groupeSanguin'
 	],
 	#category : 'TestSimpleRene',
 	#package : 'TestSimpleRene'
@@ -20,6 +24,18 @@ ClientHopitalNovice >> allergie: anObject [
 	allergie := anObject
 ]
 
+{ #category : 'accessing' }
+ClientHopitalNovice >> commentaire [
+
+	^ commentaire
+]
+
+{ #category : 'accessing' }
+ClientHopitalNovice >> commentaire: anObject [
+
+	commentaire := anObject
+]
+
 { #category : 'as yet unclassified' }
 ClientHopitalNovice >> descriptionAllergie [
 	<simpleReneDescription>
@@ -27,6 +43,47 @@ ClientHopitalNovice >> descriptionAllergie [
 		accessor: #allergie;
 		label: 'Allergie';
 		yourself
+]
+
+{ #category : 'as yet unclassified' }
+ClientHopitalNovice >> descriptionCommentaire [
+
+	<simpleReneDescription>
+	^ SRStringDescription new
+		  accessor: #commentaire;
+		  label: 'Commentaire';
+		  yourself
+]
+
+{ #category : 'as yet unclassified' }
+ClientHopitalNovice >> descriptionGroupeSanguin [
+
+	<simpleReneDescription>
+	^ SROptionDescription new
+		  accessor: #groupeSanguin;
+		  label: 'Groupe sanguin';
+		  options: #( 'A' 'B' 'O' 'AB' );
+		  yourself
+]
+
+{ #category : 'as yet unclassified' }
+ClientHopitalNovice >> descriptionRendezVous [
+
+	<simpleReneDescription>
+	^ SRTimeDescription new
+		  accessor: #rendezVous;
+		  label: 'Rendez-vous';
+		  yourself
+]
+
+{ #category : 'as yet unclassified' }
+ClientHopitalNovice >> descriptionRendezVousAvecTimeDate [
+
+	<simpleReneDescription>
+	^ SRDateAndTimeDescription new
+		  accessor: #rendezVousAvecTimeDate;
+		  label: 'Rendez-vous date et heure';
+		  yourself
 ]
 
 { #category : 'initialization' }
