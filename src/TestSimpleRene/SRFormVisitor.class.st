@@ -57,7 +57,7 @@ SRFormVisitor >> visitOptionDescription: aSROptionDescription [
 
 	formElements add: {
 			aSROptionDescription label.
-			(SpListPresenter new items: aSROptionDescription options) }
+			(SpDropListPresenter new items: aSROptionDescription options) }
 ]
 
 { #category : 'visiting' }
