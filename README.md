@@ -7,6 +7,6 @@ Metacello new
 ```
 
 # Utilisation
-```
+```st
 SRFormApp new open
 ```
