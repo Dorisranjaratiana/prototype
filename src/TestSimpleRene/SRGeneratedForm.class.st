@@ -2,10 +2,10 @@ Class {
 	#name : 'SRGeneratedForm',
 	#superclass : 'SpPresenter',
 	#instVars : [
-		'simpleReneModel',
 		'okButton',
 		'cancelButton',
-		'selectedLevel'
+		'selectedLevel',
+		'simpleReneModelClass'
 	],
 	#category : 'TestSimpleRene',
 	#package : 'TestSimpleRene'
@@ -15,7 +15,7 @@ Class {
 SRGeneratedForm >> defaultLayout [
 
 	^ SpBoxLayout newTopToBottom
-		  add: (SRFormBuilder new buildForm: simpleReneModel simpleReneDescription);
+		  add: (SRFormBuilder new buildForm: simpleReneModelClass new simpleReneDescription);
 		  yourself
 ]
 
@@ -36,7 +36,7 @@ SRGeneratedForm >> initializeWindow: aWindowPresenter [
 	aWindowPresenter title: 'Dynamic form generator'.
 
 
-	simpleReneModel := SRFormApp availableOptions at: selectedLevel.
+	simpleReneModelClass := SRFormApp availableOptions at: selectedLevel.
 	okButton := self newButton label: 'OK'.
 	cancelButton := self newButton label: 'Annuler'
 ]
