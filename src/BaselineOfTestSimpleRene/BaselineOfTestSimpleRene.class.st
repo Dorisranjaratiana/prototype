@@ -21,6 +21,6 @@ BaselineOfTestSimpleRene >> defineDependencies: spec [
 		baseline: 'SimpleRene' 
 		with: [
 			spec
-				repository: 'github://pharo-contributions/SimpleRene:v1.0.0';
+				repository: 'github://pharo-contributions/SimpleRene:master/src';
 				loads: #( Core ) ]
 ]
