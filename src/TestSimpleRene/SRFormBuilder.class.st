@@ -1,12 +1,12 @@
 Class {
-	#name : 'MyForm',
+	#name : 'SRFormBuilder',
 	#superclass : 'SpPresenter',
 	#category : 'TestSimpleRene',
 	#package : 'TestSimpleRene'
 }
 
 { #category : 'as yet unclassified' }
-MyForm >> buildForm: allDescriptions [
+SRFormBuilder >> buildForm: allDescriptions [
 
 	| formVisitor |
 	formVisitor := SRFormVisitor new.
@@ -22,7 +22,7 @@ MyForm >> buildForm: allDescriptions [
 ]
 
 { #category : 'layout' }
-MyForm >> defaultLayout [
+SRFormBuilder >> defaultLayout [
 
 	^ SpBoxLayout newTopToBottom.
 		
