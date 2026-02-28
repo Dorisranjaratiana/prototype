@@ -1,3 +1,6 @@
+"
+expert seulemet
+"
 Class {
 	#name : 'ClientHopitalExpert',
 	#superclass : 'ClientHopitalNovice',

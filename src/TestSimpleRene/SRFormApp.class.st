@@ -1,3 +1,15 @@
+"
+""Je suis le point d'entrée de l'application.
+Mon rôle est unique : lancer l'interface.
+Je crée la fenêtre principale avec le menu de sélection du niveau
+et le bouton 'Generer le formulaire'.
+
+Utilisation :
+    SRFormApp new open
+
+Je ne connais pas ClientHopital directement.
+Je délègue la construction du formulaire à SRFormBuilder.""
+"
 Class {
 	#name : 'SRFormApp',
 	#superclass : 'SpPresenter',

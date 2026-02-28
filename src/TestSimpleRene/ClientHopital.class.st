@@ -1,3 +1,6 @@
+"
+simple
+"
 Class {
 	#name : 'ClientHopital',
 	#superclass : 'Object',
@@ -43,7 +46,7 @@ ClientHopital >> descriptionAge [
 	<simpleReneDescription>
 	^ SRNumberDescription new
 		accessor: #age;
-		label: 'Ageeeeee';
+		label: 'Age';
 		yourself
 ]
 

@@ -1,3 +1,6 @@
+"
+Novice seuelement
+"
 Class {
 	#name : 'ClientHopitalNovice',
 	#superclass : 'ClientHopital',
