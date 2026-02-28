@@ -33,7 +33,7 @@ SRGeneratedForm >> initializeWindow: aWindowPresenter [
 
 	super initializeWindow: aWindowPresenter.
 
-	aWindowPresenter title: 'Dynamic form generator'.
+	aWindowPresenter title: 'Formulaire genere pour: ' , selectedLevel.
 
 
 	simpleReneModelClass := SRFormApp availableOptions at: selectedLevel.
