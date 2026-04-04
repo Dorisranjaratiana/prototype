@@ -1,17 +1,13 @@
-"
-simple
-"
 Class {
 	#name : 'ClientHopital',
 	#superclass : 'Object',
 	#instVars : [
-		'age',
 		'nom',
-		'sexe',
-		'uiColor',
 		'prenom',
-		'quantite',
-		'dateNaissance'
+		'age',
+		'telephone',
+		'chambre',
+		'allergies'
 	],
 	#category : 'TestSimpleRene',
 	#package : 'TestSimpleRene'
@@ -30,75 +26,106 @@ ClientHopital >> age: anObject [
 ]
 
 { #category : 'accessing' }
-ClientHopital >> dateNaissance [
+ClientHopital >> allergies [
 
-	^ dateNaissance
+	^ allergies
 ]
 
 { #category : 'accessing' }
-ClientHopital >> dateNaissance: anObject [
+ClientHopital >> allergies: anObject [
 
-	dateNaissance := anObject
+	allergies := anObject
+]
+
+{ #category : 'accessing' }
+ClientHopital >> chambre [
+
+	^ chambre
+]
+
+{ #category : 'accessing' }
+ClientHopital >> chambre: anObject [
+
+	chambre := anObject
 ]
 
 { #category : 'as yet unclassified' }
 ClientHopital >> descriptionAge [
-	<simpleReneDescription>
-	^ SRNumberDescription new
-		accessor: #age;
-		label: 'Age';
-		yourself
+    <simpleReneDescription>
+    ^ SRNumberDescription new
+        accessor: #age;
+        label: 'Âge';
+        comment: 'Âge du patient – information de base';
+        propertyAt: #level put: #simple;
+        yourself
 ]
 
 { #category : 'as yet unclassified' }
-ClientHopital >> descriptionDateNaissance [
-	<simpleReneDescription>
-	^ SRDateDescription new
-		accessor: #dateNaissance ;
-		label: 'Date de naissance';
-		yourself
+ClientHopital >> descriptionAllergies [
+    <simpleReneDescription>
+    ^ SRStringDescription new
+        accessor: #allergies;
+        label: 'Allergies';
+        comment: 'Allergies médicamenteuses – réservé au contexte Expert';
+        propertyAt: #level put: #expert;
+        yourself
+]
+
+{ #category : 'as yet unclassified' }
+ClientHopital >> descriptionChambre [
+    <simpleReneDescription>
+    ^ SRStringDescription new
+        accessor: #chambre;
+        label: 'Chambre';
+        comment: 'Chambre assignée – visible en contexte Base/Expert';
+        propertyAt: #level put: #base;
+        yourself
+
 ]
 
 { #category : 'as yet unclassified' }
 ClientHopital >> descriptionNom [
-	<simpleReneDescription>
-	^ SRStringDescription new
-		accessor: #nom ;
-		label: 'Nom';
-		yourself
+    <simpleReneDescription>
+    ^ SRStringDescription new
+        accessor: #nom;
+        label: 'Nom';
+        comment: 'Nom du patient – identifiant principal';
+        propertyAt: #level put: #simple;
+        yourself
 ]
 
 { #category : 'as yet unclassified' }
 ClientHopital >> descriptionPrenom [
-	<simpleReneDescription>
-	^ SRStringDescription new
-		accessor: #prenom ;
-		label: 'Prenom';
-		yourself
+    <simpleReneDescription>
+    ^ SRStringDescription new
+        accessor: #prenom;
+        label: 'Prénom';
+        comment: 'Prénom usuel';
+        propertyAt: #level put: #simple;
+        yourself
 ]
 
 { #category : 'as yet unclassified' }
-ClientHopital >> descriptionQuantite [
-	<simpleReneDescription>
-	^ SRNumberDescription new
-		accessor: #quantite ;
-		label: 'Quantite';
-		yourself
-]
-
-{ #category : 'as yet unclassified' }
-ClientHopital >> descriptionSexe [
-	<simpleReneDescription>
-	^ SRStringDescription new
-		accessor: #sexe ;
-		label: 'Sexe';
-		yourself
+ClientHopital >> descriptionTelephone [
+    <simpleReneDescription>
+    ^ SRStringDescription new
+        accessor: #telephone;
+        label: 'Téléphone';
+        comment: 'Numéro de contact – visible en contexte Base/Expert';
+        propertyAt: #level put: #base;
+        yourself
 ]
 
 { #category : 'initialization' }
 ClientHopital >> initialize [
-
-	uiColor := Color blue
+    super initialize.
+    nom := ''.
+    prenom := ''.
+    age := 0.
+    telephone := ''.
+    chambre := ''.
+    allergies := ''.
+    ^ self
 ]
 
 { #category : 'accessing' }
@@ -126,37 +153,13 @@ ClientHopital >> prenom: anObject [
 ]
 
 { #category : 'accessing' }
-ClientHopital >> quantite [
+ClientHopital >> telephone [
 
-	^ quantite
+	^ telephone
 ]
 
 { #category : 'accessing' }
-ClientHopital >> quantite: anObject [
+ClientHopital >> telephone: anObject [
 
-	quantite := anObject
-]
-
-{ #category : 'accessing' }
-ClientHopital >> sexe [
-
-	^ sexe
-]
-
-{ #category : 'accessing' }
-ClientHopital >> sexe: anObject [
-
-	sexe := anObject
-]
-
-{ #category : 'accessing' }
-ClientHopital >> uiColor [
-
-	^ uiColor
-]
-
-{ #category : 'accessing' }
-ClientHopital >> uiColor: anObject [
-
-	uiColor := anObject
+	telephone := anObject
 ]
